@@ -84,11 +84,6 @@ PRODUCT_COPY_FILES +=\
 vendor/qcom/opensource/audio-hal/primary-hal/configs/msm8937/audio_output_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_output_policy.conf\
 vendor/qcom/opensource/audio-hal/primary-hal/configs/msm8937/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf\
 vendor/qcom/opensource/audio-hal/primary-hal/configs/msm8937/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
-vendor/qcom/opensource/audio-hal/primary-hal/configs/msm8937/mixer_paths_tasha.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_tasha.xml \
-vendor/qcom/opensource/audio-hal/primary-hal/configs/msm8937/mixer_paths_tashalite.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_tashalite.xml \
-vendor/qcom/opensource/audio-hal/primary-hal/configs/msm8937/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
-vendor/qcom/opensource/audio-hal/primary-hal/configs/msm8937/mixer_paths_mtp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_mtp.xml \
-vendor/qcom/opensource/audio-hal/primary-hal/configs/msm8937/mixer_paths_sku1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_sku1.xml \
 vendor/qcom/opensource/audio-hal/primary-hal/configs/msm8937/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths.xml \
 vendor/qcom/opensource/audio-hal/primary-hal/configs/msm8937/sound_trigger_mixer_paths_wcd9306.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths_wcd9306.xml \
 vendor/qcom/opensource/audio-hal/primary-hal/configs/msm8937/sound_trigger_mixer_paths_wcd9330.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths_wcd9330.xml \
@@ -98,16 +93,11 @@ vendor/qcom/opensource/audio-hal/primary-hal/configs/msm8937/audio_platform_info
 vendor/qcom/opensource/audio-hal/primary-hal/configs/msm8937/audio_platform_info_tashalite.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_tashalite.xml \
 vendor/qcom/opensource/audio-hal/primary-hal/configs/msm8937/audio_platform_info_tasha.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_tasha.xml \
 vendor/qcom/opensource/audio-hal/primary-hal/configs/msm8937/audio_platform_info_mtp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_mtp.xml \
-vendor/qcom/opensource/audio-hal/primary-hal/configs/msm8937/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
 vendor/qcom/opensource/audio-hal/primary-hal/configs/msm8937/audio_tuning_mixer.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer.txt \
 vendor/qcom/opensource/audio-hal/primary-hal/configs/msm8937/audio_configs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_configs.xml
 
 #XML Audio configuration files
 ifeq ($(USE_XML_AUDIO_POLICY_CONF), 1)
-ifneq ($(TARGET_USES_AOSP_FOR_AUDIO), true)
-PRODUCT_COPY_FILES += \
-    $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/msm8937/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/audio_policy_configuration.xml
-endif
 PRODUCT_COPY_FILES += \
     $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/msm8937/audio_policy_configuration_common.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/common/bluetooth_qti_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
